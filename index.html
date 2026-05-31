@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock paper scissor</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div class="main"><h1>Rock paper scissors</h1></div>
-    <div class="summary"><h3 class="sry"></h3></div>
-    <div class="next"><p>choose your option</p></div>
-    <div class="btns">
-        <button class="btn rock-btn" onclick="game(0)">Rock</button>
-        <button class="btn paper-btn" onclick="game(1)">Paper</button>
-        <button class="btn scissor-btn" onclick="game(2)">Scissor</button>
-        <button class="btn reset" onclick="reset()">Reset</button>
+    <div class="container">
+        <div class="card">
+            <h1>✊ Rock Paper Scissors ✋</h1>
+            <p class="subtitle">Challenge the computer and track your score!</p>
+
+            <div class="score-board">
+                <div class="score-box">
+                    <h2>Wins</h2>
+                    <p id="win-count">0</p>
+                </div>
+
+                <div class="score-box">
+                    <h2>Losses</h2>
+                    <p id="lose-count">0</p>
+                </div>
+
+                <div class="score-box">
+                    <h2>Ties</h2>
+                    <p id="tie-count">0</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="game-btn rock-btn" onclick="game(0)">
+                    ✊ Rock
+                </button>
+
+                <button class="game-btn paper-btn" onclick="game(1)">
+                    ✋ Paper
+                </button>
+
+                <button class="game-btn scissor-btn" onclick="game(2)">
+                    ✌️ Scissor
+                </button>
+            </div>
+
+            <button class="reset-btn" onclick="reset()">
+                Reset Game
+            </button>
+
+            <div class="result-box">
+                <h2 class="line"></h2>
+            </div>
+
+        </div>
+
     </div>
-    <h2 class="line"></h2>
+
     <script src="script.js"></script>
 </body>
+
 </html>
